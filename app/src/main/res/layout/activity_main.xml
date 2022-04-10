@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="#F7F5F2"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/game_IMG_heart1"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/ic_heart_icon">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/game_IMG_heart2"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignTop="@id/game_IMG_heart1"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/game_IMG_heart1"
+            android:src="@drawable/ic_heart_icon">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/game_IMG_heart3"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_alignTop="@id/game_IMG_heart2"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/game_IMG_heart2"
+            android:src="@drawable/ic_heart_icon">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/score_LBL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="000"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold">
+        </TextView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="690dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:id="@+id/matrix">
+        <View style="@style/HorizontalDivider"></View>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#FFEEEE">
+            <ImageView
+                android:id="@+id/image00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#F7F5F2">
+            <ImageView
+                android:id="@+id/image10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#FFEEEE">
+            <ImageView
+                android:id="@+id/image20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#F7F5F2">
+            <ImageView
+                android:id="@+id/image30"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#FFEEEE">
+            <ImageView
+                android:id="@+id/image40"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image41"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image42"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#F7F5F2"
+        android:id="@+id/arrows_btn_space">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/left_BTN"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="45dp"
+            android:backgroundTint="#DFDFDE"
+            app:icon="@drawable/ic_left_icon"
+            app:iconSize="40dp"
+            app:iconTint="#FFA8A8"></com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/up_BTN"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#DFDFDE"
+            app:icon="@drawable/ic_up_icon"
+            app:iconSize="40dp"
+            app:iconTint="#FFA8A8"></com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/right_BTN"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@id/left_BTN"
+            android:layout_marginStart="320dp"
+            android:backgroundTint="#DFDFDE"
+            app:icon="@drawable/ic_right_icon"
+            app:iconSize="40dp"
+            app:iconTint="#FFA8A8">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/down_BTN"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignStart="@id/up_BTN"
+            android:layout_marginTop="90dp"
+            android:backgroundTint="#DFDFDE"
+            app:icon="@drawable/ic_down_icon"
+            app:iconSize="40dp"
+            app:iconTint="#FFA8A8">
+        </com.google.android.material.button.MaterialButton>
+        <View style="@style/HorizontalDivider"></View>
+    </RelativeLayout>
+
+</LinearLayout>
