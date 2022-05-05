@@ -80,4 +80,6 @@ public class DataManager {
     public void scoreCrashReduce(){
         score-=5;
     }
+
+
 }

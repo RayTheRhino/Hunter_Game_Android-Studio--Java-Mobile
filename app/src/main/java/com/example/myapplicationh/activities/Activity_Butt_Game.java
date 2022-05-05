@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.VibrationEffect;
 import android.os.Vibrator;
+import android.util.Log;
+import android.util.LogPrinter;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -22,6 +24,11 @@ import com.example.myapplicationh.R;
 import com.example.myapplicationh.utils.MSP;
 import com.google.android.material.button.MaterialButton;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.logging.LogRecord;
+
 public class Activity_Butt_Game extends AppCompatActivity {
     public static final String MODE = "";
     private String whatMode;
@@ -33,7 +40,6 @@ public class Activity_Butt_Game extends AppCompatActivity {
     private ImageView[] imageLives;
     private MaterialButton[] buttonsArr;
     private TextView score_LBL;
-
     private int rowsNum = 6;
     private int colsNum = 5;
     private int cupleCol = 1;
@@ -82,10 +88,27 @@ public class Activity_Butt_Game extends AppCompatActivity {
         runLogic();
     }
 
-    private void saveScore(DataManager dm) {
-        SharedPreferences.Editor editor = getSharedPreferences(MSP.getMe().getSP_FILE(), MODE_PRIVATE).edit();
-        editor.putString(dm.getCurrentPlayer().getName(),String.valueOf(dm.getScore()));
-        editor.apply();
+    private void saveScore() {
+        if(needToSaveScore()) {
+            SharedPreferences.Editor editor = MSP.getMe().getEditor();
+            editor.putInt(MSP.getMe().getPlayerName(),dm.getScore());
+            editor.apply();
+        }
+    }
+
+    private boolean needToSaveScore() {
+        Map<String,Integer> topTen = (Map<String, Integer>) MSP.getMe().getSharedPreferences().getAll();
+        if(topTen.size()<DataManager.MAX_LEN)
+            return true;
+        else {
+            List<Map.Entry<String, Integer>> list = new ArrayList<>(topTen.entrySet());
+            list.sort(Map.Entry.comparingByValue());
+            String key = (String) topTen.keySet().toArray()[0];
+            if(dm.getScore()>topTen.get(key))
+                return true;
+            return false;
+        }
+
     }
 
     private void startPos() {   //characters positions when game start
@@ -317,7 +340,7 @@ public class Activity_Butt_Game extends AppCompatActivity {
     private void exitGame() {   //finish game
         StopTick();
         Toast.makeText(getApplicationContext(), "Game is over", Toast.LENGTH_LONG).show();
-        saveScore(dm);
+        saveScore();
         finish();
     }
 

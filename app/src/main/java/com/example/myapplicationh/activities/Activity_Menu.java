@@ -30,7 +30,7 @@ public class Activity_Menu extends AppCompatActivity {
     private EditText txt_EDT_name;
     private String scoreFromGame = "";
     private DataManager dataManager;
-    private String startScore = "00";
+    private int startScore = 0;
     private Bundle bundle = null;
 
 
@@ -66,6 +66,7 @@ public class Activity_Menu extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), Activity_Sensor_Game.class);
                 intent.putExtra(Activity_Butt_Game.MODE, "SENSORS");
                 String name = MSP.getMe().getString(MSP.getMe().getSP_FILE(), txt_EDT_name.getText().toString());
+                MSP.getMe().setPlayerName(name);
                 saveName(name);
                 startActivity(intent);
             }
@@ -105,8 +106,9 @@ public class Activity_Menu extends AppCompatActivity {
     }
 
     private void saveName(String name) {
-        SharedPreferences.Editor editor = getSharedPreferences(MSP.getMe().getSP_FILE(), MODE_PRIVATE).edit();
-        editor.putString(name,startScore);
+        SharedPreferences.Editor editor = MSP.getMe().getEditor();
+        MSP.getMe().setPlayerName(name);
+        editor.putInt(name,startScore);
         editor.apply();
     }
     private void getResults(){

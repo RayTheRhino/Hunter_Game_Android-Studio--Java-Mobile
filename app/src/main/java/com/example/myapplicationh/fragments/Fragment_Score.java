@@ -2,6 +2,7 @@ package com.example.myapplicationh.fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,23 +19,26 @@ import com.example.myapplicationh.R;
 import com.example.myapplicationh.utils.MSP;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
 
 public class Fragment_Score extends Fragment {
     private TextView[][]scoreList;
     private AppCompatActivity activity;
     private DataManager dataManager;
     private CallBack_Location callBack_location;
-    private String name;
-    private ArrayList<Player> topTenList;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstancesState) {
         View view = inflater.inflate(R.layout.fragment_score, container, false);
         findViews(view);
-//        topTenList = MSP.getMe().getUdersData();
-//        getDetails();
-//        getSelected();
+
+        getDetails();
+        //getSelected();
 
         return view;
     }
@@ -46,12 +50,17 @@ public class Fragment_Score extends Fragment {
     }
 
     public void getDetails() {
-        Player[] players = dataManager.getPlayers();
-        for (int i = 0; i <dataManager.MAX_LEN;i++){
-            if(players[i] == null)
-                return;
-            scoreList[i][0].setText(players[i].getName());
-            scoreList[i][1].setText(players[i].getScore());
+        Map<String,Integer> topTen = (Map<String, Integer>) MSP.getMe().getSharedPreferences().getAll();
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(topTen.entrySet());
+        list.sort(Collections.reverseOrder(Map.Entry.comparingByValue()));
+        showtopTen(list);
+
+    }
+
+    private void showtopTen(List<Map.Entry<String, Integer>> list) {
+        for(int i =0;i<list.size();i++){
+            scoreList[i][0].setText(list.get(i).getKey());
+            scoreList[i][1].setText(""+list.get(i).getValue());
         }
     }
 

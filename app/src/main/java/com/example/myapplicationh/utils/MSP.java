@@ -10,9 +10,26 @@ public class MSP {
     private static MSP me;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+    private String playerName;
 
     public static MSP getMe() {
         return me;
+    }
+
+    public SharedPreferences getSharedPreferences() {
+        return sharedPreferences;
+    }
+
+    public SharedPreferences.Editor getEditor() {
+        return editor;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
     private MSP(Context context) {
