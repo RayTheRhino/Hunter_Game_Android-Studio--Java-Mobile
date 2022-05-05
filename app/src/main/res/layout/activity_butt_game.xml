@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".activities.Activity_Butt_Game"
+    android:keepScreenOn="true"
     android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="#F7F5F2"
+        android:layout_height="240dp"
+        android:background="#FEFBF3"
         android:layout_weight="1">
 
         <ImageView
@@ -20,8 +20,7 @@
             android:layout_height="54dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:src="@drawable/ic_heart_icon">
-        </ImageView>
+            android:src="@drawable/ic_heart_icon"></ImageView>
 
         <ImageView
             android:id="@+id/game_IMG_heart2"
@@ -40,8 +39,7 @@
             android:layout_alignTop="@id/game_IMG_heart2"
             android:layout_marginStart="8dp"
             android:layout_toEndOf="@id/game_IMG_heart2"
-            android:src="@drawable/ic_heart_icon">
-        </ImageView>
+            android:src="@drawable/ic_heart_icon"></ImageView>
 
         <TextView
             android:id="@+id/score_LBL"
@@ -55,8 +53,7 @@
             android:text="000"
             android:textColor="@color/black"
             android:textSize="35sp"
-            android:textStyle="bold">
-        </TextView>
+            android:textStyle="bold"></TextView>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -71,7 +68,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="#FFEEEE">
+            android:background="#FFCBCB">
             <ImageView
                 android:id="@+id/image00"
                 android:layout_width="0dp"
@@ -99,6 +96,24 @@
                 android:visibility="invisible">
             </ImageView>
             <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image03"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image04"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
         <View style="@style/HorizontalDivider"></View>
@@ -108,7 +123,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="#F7F5F2">
+            android:background="#FFEDED">
             <ImageView
                 android:id="@+id/image10"
                 android:layout_width="0dp"
@@ -136,6 +151,24 @@
                 android:visibility="invisible">
             </ImageView>
             <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image14"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
         </androidx.appcompat.widget.LinearLayoutCompat>
         <View style="@style/HorizontalDivider"></View>
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -144,7 +177,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="#FFEEEE">
+            android:background="#FFCBCB">
             <ImageView
                 android:id="@+id/image20"
                 android:layout_width="0dp"
@@ -172,6 +205,24 @@
                 android:visibility="invisible">
             </ImageView>
             <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image24"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
         <View style="@style/HorizontalDivider"></View>
@@ -181,7 +232,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="#F7F5F2">
+            android:background="#FFEDED">
             <ImageView
                 android:id="@+id/image30"
                 android:layout_width="0dp"
@@ -209,6 +260,24 @@
                 android:visibility="invisible">
             </ImageView>
             <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image34"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
         <View style="@style/HorizontalDivider"></View>
@@ -218,7 +287,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:background="#FFEEEE">
+            android:background="#FFCBCB">
             <ImageView
                 android:id="@+id/image40"
                 android:layout_width="0dp"
@@ -246,13 +315,90 @@
                 android:visibility="invisible">
             </ImageView>
             <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image43"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image44"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:background="#FFEDED">
+            <ImageView
+                android:id="@+id/image50"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image51"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image52"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image53"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+            <ImageView
+                android:id="@+id/image54"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_cupid_icon"
+                android:visibility="invisible">
+            </ImageView>
+            <View style="@style/VerticalDivider"></View>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <View style="@style/HorizontalDivider"></View>
+
+
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="#F7F5F2"
+        android:background="#FEFBF3"
         android:id="@+id/arrows_btn_space">
 
         <com.google.android.material.button.MaterialButton
@@ -300,6 +446,7 @@
             app:iconSize="40dp"
             app:iconTint="#FFA8A8">
         </com.google.android.material.button.MaterialButton>
+
         <View style="@style/HorizontalDivider"></View>
     </RelativeLayout>
 
