@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.Activity_Menu"
+    android:keepScreenOn="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        android:background="@drawable/wallpaper_background">
+
+
+        <EditText
+            android:id="@+id/txt_EDT_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:hint="Enter Name"
+            android:padding="16dp"
+            app:boxBackgroundColor="#F190B7"
+            android:textColorHint="#F190B7"></EditText>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/enter_BTN_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F190B7"
+            android:textColor="#F7F5F2"
+            app:cornerRadius="25dp"
+            android:text="enter">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_BTN_hunter_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Buttons Hunter Game"
+            android:backgroundTint="#F190B7"
+            android:textColor="#F7F5F2"
+            app:cornerRadius="25dp"
+            android:visibility="invisible"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_BTN_sensor_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Sensors Hunter Game"
+            android:backgroundTint="#F190B7"
+            android:textColor="#F7F5F2"
+            app:cornerRadius="25dp"
+            android:visibility="invisible"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/game_BTN_record_table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Top 10!"
+            android:backgroundTint="#F190B7"
+            android:textColor="#F7F5F2"
+            app:cornerRadius="25dp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
