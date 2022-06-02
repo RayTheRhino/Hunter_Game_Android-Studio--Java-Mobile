@@ -29,15 +29,11 @@ public class Activity_Top_Ten extends AppCompatActivity {
         findViews();
         createListner();
         fragmentScore = new Fragment_Score();
-//        fragmentScore.setActivity(this);
-//        fragmentScore.setDataManager(callBackUpdate.getData());
-//        fragmentScore.setCallBackLocation(callBackLocation);
-        //fragmentScore.setDataManager();
+
         getSupportFragmentManager().beginTransaction().add(R.id.game_LAY_list,fragmentScore).commit();
 
         fragmentMap = new MapsFragment();
-//        fragmentMap.setActivity(this);
-//        fragmentMap.setDataManager(callBackUpdate.getData());
+
         getSupportFragmentManager().beginTransaction().add(R.id.map_LAY_details, fragmentMap).commit();
     }
 
